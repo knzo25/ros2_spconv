@@ -15,6 +15,7 @@ ament_auto_find_build_dependencies()
 include_directories(
     include
     SYSTEM
+    ${CUDA_INCLUDE_DIRS}
     ${cumm_INCLUDE_DIRS}
 )
 
