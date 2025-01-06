@@ -15,6 +15,7 @@ ament_auto_find_build_dependencies()
 include_directories(
     include
     SYSTEM
+    ${cumm_INCLUDE_DIRS}
 )
 
 # The spconv was generated originally for 86 only. Here we can add more architectures.
