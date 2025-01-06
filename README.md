@@ -13,7 +13,7 @@ The code was generated using the following versions:
 These packages can be built normally, provided CUDA is available:
 
 ```bash
-colcon build --symlink-install -DCMAKE_BUILD_TYPE=Release
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 # Testing
