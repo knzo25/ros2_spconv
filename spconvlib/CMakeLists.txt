@@ -20,8 +20,12 @@ include_directories(
 )
 
 # The spconv was generated originally for 86 only. Here we can add more architectures.
-set(CMAKE_CUDA_ARCHITECTURES 75 86)
-        
+set(CMAKE_CUDA_ARCHITECTURES 75 86 89)
+
+foreach (ARCH IN LISTS CMAKE_CUDA_ARCHITECTURES)
+  add_compile_definitions(CUDA_ARCH_${ARCH})
+endforeach()
+
 add_subdirectory(spconvlib/cumm/gemm/main/Simt_f32f32f32f32f32ttt_m64n256k8m32n64k8A1_200_S1/GemmKernel)
 add_subdirectory(spconvlib/cumm/gemm/main/Simt_f32f32f32f32f32tnt_m64n256k8m32n64k8A1_200_S1/GemmKernel)
 add_subdirectory(spconvlib/cumm/gemm/main/Simt_f32f32f32f32f32ttt_m32n128k16m32n32k8A1_200_S1/GemmKernel)
