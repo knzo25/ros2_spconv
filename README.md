@@ -10,10 +10,16 @@ The code was generated using the following versions:
 
 # Building
 
-These packages can be built normally, provided CUDA is available:
+These packages can be built normally, provided the required CUDA libraries are available:
 
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+In an autoware environment, the following command is usually needed (change the cuda version as needed):
+
+```bash
+sudo apt-get install cuda-nvrtc-dev-12-3
 ```
 
 # Testing
