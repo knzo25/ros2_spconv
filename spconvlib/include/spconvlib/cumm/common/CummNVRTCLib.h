@@ -1,5 +1,5 @@
 #pragma once
-#include <tensorview/cuda/nvrtc.h>
+//#include <tensorview/cuda/nvrtc.h> // NOTE(knzo25): unused
 #include <tensorview/gemm/core/nvrtc_bases.h>
 #include <spconvlib/cumm/common/TensorView.h>
 namespace spconvlib {
