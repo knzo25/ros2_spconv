@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
-project(spconvlib LANGUAGES CXX CUDA)
+project(spconvlib LANGUAGES CXX)
 
 find_package(ament_cmake_auto REQUIRED)
 find_package(CUDA)
@@ -8,6 +8,8 @@ find_package(CUDAToolkit)
 if(NOT ${CUDA_FOUND})
   message(WARNING "cuda was not found. the spconvlib package will not be built.")
   return()
+else()
+enable_language(CUDA)
 endif()
 
 ament_auto_find_build_dependencies()
